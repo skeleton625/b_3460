@@ -1,18 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int t, n, c;
+int t, n;
 int main() {
 	cin >> t;
 	while (t--) {
 		cin >> n;
-		while (n != 0) {
-			if (n % 2 == 1) cout << c << " ";
-			c++;
-			n /= 2;
+		for (int i = 0; n; i++) {
+			if (n & 1) cout << i << " ";
+			n >>= 1;
 		}
 		cout << endl;
-		c = 0;
 	}
 	return 0;
 }
